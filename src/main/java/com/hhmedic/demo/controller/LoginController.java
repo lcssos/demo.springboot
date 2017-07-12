@@ -2,6 +2,7 @@ package com.hhmedic.demo.controller;
 
 import com.hhmedic.demo.entity.ShiroUser;
 import com.hhmedic.demo.response.Response;
+import com.hhmedic.demo.response.ResponseEnum;
 import com.hhmedic.demo.response.ResponseFactory;
 import com.hhmedic.demo.util.ShiroUtil;
 import org.apache.shiro.SecurityUtils;
@@ -23,7 +24,7 @@ public class LoginController {
     public Response login(){
         //登录认证未通过
         if(!ShiroUtil.isAuthenticated()){
-            return ResponseFactory.getFailure();
+            return ResponseFactory.getResponse(ResponseEnum.please_login);
         }
         return ResponseFactory.getSuccessData(ShiroUtil.getUser());
     }

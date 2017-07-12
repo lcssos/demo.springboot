@@ -12,6 +12,9 @@ public class ResponseFactory {
 	public static <T> Response<T> getResponse(ResponseEnum responseEnum,T data){
 		return getResponse(responseEnum.getCode(),responseEnum.getMessage(),data);
 	}
+	public static Response getResponse(ResponseEnum responseEnum){
+		return getResponse(responseEnum.getCode(),responseEnum.getMessage(),null);
+	}
 
 	/**
 	 * 返回成功内容

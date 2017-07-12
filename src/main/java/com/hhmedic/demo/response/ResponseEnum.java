@@ -6,6 +6,7 @@ package com.hhmedic.demo.response;
 public enum ResponseEnum {
 	success(200, "操作成功！"),
 	failure(500, "操作失败！"),
+    please_login(401,"请重新登录！")
 			;
 
 	private int code;     // 状态
