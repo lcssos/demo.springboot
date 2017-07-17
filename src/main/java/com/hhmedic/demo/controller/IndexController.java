@@ -26,7 +26,7 @@ public class IndexController {
 
     @GetMapping
     public Response<ShiroUser> index(){
-        return ResponseFactory.getSuccessData(ShiroUtil.getUser());
+        return ResponseFactory.getSuccess(null,ShiroUtil.getUser());
     }
 
 //    @RequestMapping(value = "index")
